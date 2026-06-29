@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy life Medical center-patient Registration form </title>
+    <style>
+        body {
+            background-color: lightgray; /* Set background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            width: 600px; /* Set form width */
+            margin: 0 auto; /* Center form on page */
+            border: 3px solid #000080; /* 3px solid navy-blue border */
+            padding: 20px; /* 20px padding inside */
+            background-color: #ffffff; 
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        h2 {
+            color: darkgreen; /* Heading color dark green */
+            text-align: center; /* Align to center */
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold; /* Make all labels bold */
+            margin-bottom: 5px;
+        }
+
+        /* Styling text fields, selections, and textareas */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%; /* Width: 100% */
+            padding: 10px; /* Padding: 10px */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Inline group formatting for radio buttons and checkboxes */
+        .inline-group {
+            margin-bottom: 15px;
+        }
+
+        .inline-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal; 
+        }
+        
+        .inline-group p {
+            margin: 0 0 5px 0;
+        }
+
+        /* Button Styling */
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            flex: 1;
+            background-color: green; /* Background color: green */
+            color: white; /* White text */
+            padding: 10px; /* Padding: 10px */
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST">
+        
+        <div class="logo-container">
+            <img src="healthcare-hospital-logo-png_seeklogo-396397.png" alt="Healthy Life Medical Centre Logo">
+        </div>
+
+        <h2>Healthy Life Medical Centre - Patient Registration Form</h2>
+
+        <div class="form-group">
+            <label for="fullname">Patient Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="inline-group">
+            <label style="font-weight: bold;">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+        </div>
+
+        <div class="inline-group">
+            <label style="font-weight: bold;">Medical Conditions:</label>
+            <input type="checkbox" id="diabetes" name="conditions" value="Diabetes">
+            <label for="diabetes">Diabetes</label>
+            
+            <input type="checkbox" id="hypertension" name="conditions" value="Hypertension">
+            <label for="hypertension">Hypertension</label>
+            
+            <input type="checkbox" id="asthma" name="conditions" value="Asthma">
+            <label for="asthma">Asthma</label>
+            
+            <input type="checkbox" id="none" name="conditions" value="None">
+            <label for="none">None</label>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department Selection:</label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>-- Select Department --</option>
+                <option value="General Medicine">General Medicine</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Dentistry">Dentistry</option>
+                <option value="Laboratory">Laboratory</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+
+        <div class="btn-container">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+
+</body>
+</html>
